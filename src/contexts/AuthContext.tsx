@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
-import { User, AuthState, LoginForm, RegisterForm } from '../types';
+import type { User, AuthState, LoginForm, RegisterForm } from '../types';
 import { mockUsers } from '../data/mockData';
 import { storage } from '../utils';
 

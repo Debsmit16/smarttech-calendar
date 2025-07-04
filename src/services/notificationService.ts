@@ -197,7 +197,7 @@ export class NotificationService {
     }
   }
 
-  private calculatePriority(hoursBefore: number, event: any): 'low' | 'medium' | 'high' | 'urgent' {
+  private calculatePriority(hoursBefore: number, _event: any): 'low' | 'medium' | 'high' | 'urgent' {
     if (hoursBefore <= 0.5) return 'urgent';
     if (hoursBefore <= 2) return 'high';
     if (hoursBefore <= 24) return 'medium';
@@ -239,11 +239,7 @@ export class NotificationService {
         icon: '/favicon.ico',
         badge: '/favicon.ico',
         tag: notification.id,
-        requireInteraction: notification.priority === 'urgent',
-        actions: notification.actions?.map(action => ({
-          action: action.id,
-          title: action.label
-        })) || []
+        requireInteraction: notification.priority === 'urgent'
       });
 
       browserNotification.onclick = () => {

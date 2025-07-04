@@ -1,4 +1,4 @@
-import { User, Event, Team, Project, Announcement, ScheduleItem, Score } from '../types';
+import type { User, Event, Team, Project, Announcement, ScheduleItem, Score } from '../types';
 
 // Mock Users
 export const mockUsers: User[] = [

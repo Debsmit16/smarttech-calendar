@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { NotificationService, Notification } from '../services/notificationService';
+import { NotificationService } from '../services/notificationService';
+import type { Notification } from '../services/notificationService';
 
 interface NotificationCenterProps {
   isOpen: boolean;

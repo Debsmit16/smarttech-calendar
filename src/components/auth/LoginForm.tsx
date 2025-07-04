@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
-import { LoginForm as LoginFormType } from '../../types';
+import type { LoginForm as LoginFormType } from '../../types';
 
 interface LoginFormProps {
   onToggleMode: () => void;

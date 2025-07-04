@@ -1,9 +1,9 @@
 import React from 'react';
 import { useAuth } from '../../contexts/AuthContext';
-import { mockProjects, mockScores } from '../../data/mockData';
+import { mockProjects } from '../../data/mockData';
 
 const JudgingPanel: React.FC = () => {
-  const { user } = useAuth();
+  const { } = useAuth();
 
   return (
     <div className="dashboard-content">

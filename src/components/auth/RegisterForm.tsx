@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
-import { RegisterForm as RegisterFormType, UserRole } from '../../types';
+import type { RegisterForm as RegisterFormType } from '../../types';
 
 interface RegisterFormProps {
   onToggleMode: () => void;

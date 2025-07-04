@@ -5,7 +5,6 @@ import ImageUpload from './ui/ImageUpload';
 import EventFeed from './EventFeed';
 import NotificationCenter from './NotificationCenter';
 import { NotificationService } from '../services/notificationService';
-import { RecommendationService } from '../services/recommendationService';
 
 interface CalendarEvent {
   id: number;
@@ -47,7 +46,6 @@ const SimpleCalendar: React.FC<SimpleCalendarProps> = ({ onBackToLanding }) => {
   ]);
   const [quickInput, setQuickInput] = useState('');
   const [parseConfidence, setParseConfidence] = useState<number | null>(null);
-  const [showAddEvent, setShowAddEvent] = useState(false);
   const [showImageUpload, setShowImageUpload] = useState(false);
   const [viewMode, setViewMode] = useState<ViewMode>('calendar');
   const [showNotifications, setShowNotifications] = useState(false);
@@ -55,7 +53,6 @@ const SimpleCalendar: React.FC<SimpleCalendarProps> = ({ onBackToLanding }) => {
 
   // Services
   const notificationService = NotificationService.getInstance();
-  const recommendationService = RecommendationService.getInstance();
 
   // Voice input hook
   const {

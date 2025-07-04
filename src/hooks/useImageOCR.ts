@@ -47,8 +47,7 @@ export const useImageOCR = (): UseImageOCRResult => {
       
       // Configure worker for better performance with event posters
       await worker.setParameters({
-        tessedit_char_whitelist: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .,:-/()@',
-        tessedit_pageseg_mode: '6', // Uniform block of text
+        tessedit_char_whitelist: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .,:-/()@'
       });
 
       // Process the image

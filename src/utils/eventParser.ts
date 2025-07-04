@@ -205,7 +205,7 @@ function extractTitle(input: string, eventType: string): string {
 function findTechKeywords(text: string): string[] {
   const found: string[] = [];
   
-  for (const [category, keywords] of Object.entries(TECH_KEYWORDS)) {
+  for (const [_category, keywords] of Object.entries(TECH_KEYWORDS)) {
     for (const keyword of keywords) {
       if (text.includes(keyword)) {
         found.push(keyword.toUpperCase());

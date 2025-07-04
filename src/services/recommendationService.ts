@@ -106,9 +106,9 @@ export class RecommendationService {
   }
 
   private calculateSkillScore(event: any, userProfile: UserProfile) {
-    const skillLevels = { beginner: 1, intermediate: 2, advanced: 3 };
+    const skillLevels: Record<string, number> = { beginner: 1, intermediate: 2, advanced: 3 };
     const userLevel = skillLevels[userProfile.skillLevel];
-    const eventLevel = skillLevels[event.difficulty];
+    const eventLevel = skillLevels[event.difficulty] || 2;
 
     let score = 0;
     let reason = '';

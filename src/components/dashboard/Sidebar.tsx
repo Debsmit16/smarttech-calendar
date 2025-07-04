@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserRole } from '../../types';
+import type { UserRole } from '../../types';
 
 interface SidebarProps {
   currentView: string;

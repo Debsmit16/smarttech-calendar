@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { EventFeedService, FeedEvent, EventFilters } from '../services/eventFeedService';
+import { EventFeedService } from '../services/eventFeedService';
+import type { FeedEvent, EventFilters } from '../services/eventFeedService';
 
 interface EventFeedProps {
   onAddEvent: (event: any) => void;
